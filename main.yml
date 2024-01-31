@@ -1,0 +1,10 @@
+- name: Postgres install
+  hosts: database
+  become: true
+  roles:
+   - postgres
+- name: Docker install
+  hosts: app
+  become: true
+  roles:
+   - docker
